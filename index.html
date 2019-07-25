@@ -533,24 +533,26 @@
     .footer {
       width: 100%;
       height: 500px;
-      bottom: 0;
       left: 0;
-      background-color: white;
+      right: 0;
+      margin-bottom: 0;
+      background-color: #00B500;
+      position: absolute;
     }
 
     .footer_column {
       width: 280px;
       height: 350px;
-      background-color: white;
+      background-color: transparent;
     }
 
     .footer_column a {
-      color: rgb(122, 122, 122);
+      color: white;
       text-decoration: none;
     }
 
     .footer_column a:hover {
-      color: #00B500;
+      color: rgb(202, 202, 202);
     }
 
 
@@ -980,15 +982,15 @@
 
 
       <div class="footer_column" style="margin-left: 100px;">
-        <div style="font-size: 30px; font-family: Suez One; color: #00B500;">BCRC</div><br>
-        <div style="font-size: 15px;"><b>Address</b></div><br>
-        <div style="font-size: 14px; color:rgb(39, 39, 39); line-height: 1.8; margin-top: -8px;">UGC Micro and
+        <div style="font-size: 30px; font-family: Suez One; color: white;">BCRC</div><br>
+        <div style="font-size: 15px; color: black"><b>Address</b></div><br>
+        <div style="font-size: 14px; color: white; line-height: 1.8; margin-top: -8px;">UGC Micro and
           Nanotechnology Centre ugc campus, Pacific University<br>
           2345 Southern Road<br>
           State Highway, Southbound 5712<br>
           Australia</div><br><br>
-        <div style="font-size: 15px;"><b>Contact Information</b></div><br>
-        <div style="font-size: 14px; color:rgb(39, 39, 39); line-height: 1.8; margin-top: -8px;">
+        <div style="font-size: 15px; color: black"><b>Contact Information</b></div><br>
+        <div style="font-size: 14px; color:white; line-height: 1.8; margin-top: -8px;">
           Call: +00 0012-02345<br>
           Email: brainchild.wow@gmail.com</div>
       </div>
@@ -998,16 +1000,16 @@
         <div style="font-size: 15px;"><b>Latest Events</b></div><br>
         <a href="#" style="font-size: 14px; line-height: 1.8; margin-top: 0px;"><b>Haematopoietic sten cell
             transplantaion for autoimmune diseases</b></a>
-        <p style="color:rgb(107, 107, 107); font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
+        <p style="color:white; font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
 
         <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Antithrombotic theray for patients with STMEI
             undergoing prinmary PCI</b></a>
-        <p style="color:rgb(107, 107, 107); font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
+        <p style="color:white; font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
 
         <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Commonality with cancer 2016</b></a>
-        <p style="color:rgb(107, 107, 107); font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
+        <p style="color:white; font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
 
-        <a href="#Read_more" style="text-decoration:none; font-size: 13px; color: #00B500;"><u><b>View all
+        <a href="#Read_more" style="text-decoration:none; font-size: 13px; color: white;"><u><b>View all
               Events</b></u></a>
       </div>
 
@@ -1034,13 +1036,13 @@
 
         <div class="footer_column" style="margin-left: 260px; margin-top: -345px;"><br>
           <div style="font-size: 15px;"><b>Publications Statistics</b></div><br>
-          <div style="font-size: 14px; color:rgb(39, 39, 39); line-height: 1.8; margin-top: -8px;">UGC Micro and
+          <div style="font-size: 14px; color:white; line-height: 1.8; margin-top: -8px;">UGC Micro and
             Nanotechnology Centre ugc campus, Pacific University<br>
             2345 Southern Road<br>
             State Highway, Southbound 5712<br>
             Australia</div><br><br>
           <div style="font-size: 15px;"><b>Contact Information</b></div><br>
-          <div style="font-size: 14px; color:rgb(39, 39, 39); line-height: 1.8; margin-top: -8px;">
+          <div style="font-size: 14px; color:white; line-height: 1.8; margin-top: -8px;">
             Call: +00 0012-02345<br>
             Email: brainchild.wow@gmail.com</div>
         </div>
@@ -1091,7 +1093,7 @@
       document.getElementById('slideshow').style.backgroundImage = imageUrl[index];
     }
 
-    document.getElementById('slideshow').style.backgroundImage = imageUrl[2];
+    document.getElementById('slideshow').style.backgroundImage = imageUrl[index];
 
   </script>
 
