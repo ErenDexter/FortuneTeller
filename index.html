@@ -3,1099 +3,521 @@
 
 <head>
 
-  <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Suez One'>
-  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Suez One'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel='stylesheet' type='text/css' href='main.css'>
+
+
+
+    <style>
+        /*navigation buttons*/
+        
+        .Home {
+            margin-left: 550px;
+            border-bottom: 4px solid #00B500;
+        }
+        
+        .Research {
+            margin-left: -10px;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .Research:hover {
+            border-bottom: 4px solid #00B500;
+        }
+        
+        .Blog {
+            margin-left: -10px;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .Blog:hover {
+            border-bottom: 4px solid #00B500;
+        }
+        
+        .Events {
+            margin-left: -10px;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .Events:hover {
+            border-bottom: 4px solid #00B500;
+        }
+        
+        .People {
+            margin-left: -5px;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .People:hover {
+            border-bottom: 4px solid #00B500;
+        }
+        
+        .Publications {
+            border-bottom: 4px solid transparent;
+        }
+        
+        .Publications:hover {
+            border-bottom: 4px solid #00B500;
+        }
+        
+        .Future-member {
+            margin-left: 97px;
+            border-bottom: 4px solid transparent;
+        }
+        
+        .Future-member:hover {
+            border-bottom: 4px solid #00B500;
+        }
+    </style>
 
 
-  <style>
-    ul {
-      list-style-type: none;
-      width: 100%;
-      margin-left: -8px;
-      right: 0px;
-      margin-top: 65px;
-      position: fixed;
-      padding: 0;
-      overflow: hidden;
-      background-color: white;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      position: fixed;
-    }
 
-    li {
-      float: left;
-    }
-
-    li a {
-      display: block;
-      color: black;
-      font-size: 15px;
-      font-weight: lighter;
-      font-family: sans-serif;
-      text-align: center;
-      padding: 16px 20px;
-      margin-top: -15px;
-      text-decoration: none;
-
-    }
-
-
-    .dropdown {
-      position: fixed;
-      display: inline-block;
-    }
-
-    .dropdown-content {
-      visibility: hidden;
-      opacity: 0;
-      position: absolute;
-      background-color: rgba(46, 44, 44, 0.8);
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-      z-index: 1;
-      transition: 0.2s;
-      margin-top: 5px;
-    }
-
-    .dropdown-content a {
-      color: white;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
-      margin-top: 0px;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #00B500;
-    }
-
-    .dropdown:hover .dropdown-content {
-      visibility: visible;
-      opacity: 1;
-    }
-
-
-    .slideshow {
-      width: 105%;
-      height: 520px;
-      margin-left: -8px;
-      margin-top: 0px;
-      position: relative;
-    }
-
-    #container-name {
-      width: 110%;
-      height: 90px;
-      margin-top: -20px;
-      background-color: white;
-      position: fixed;
-    }
-
-    .header {
-      font-size: 14px;
-      font-family: sans-serif;
-      margin-left: -325px;
-      margin-top: 50px;
-      color: black;
-      float: left;
-    }
-
-
-    .header2 {
-      font-size: 28px;
-      font-family: 'Suez One';
-      margin-left: 70px;
-      margin-top: 35px;
-      color: #00B500;
-      float: left;
-    }
-
-
-    .button {
-      /*Join Us*/
-      background-color: #00B500;
-      border: none;
-      color: white;
-      padding: 10px 18px;
-      text-align: center;
-      text-decoration: none;
-      margin: 4px 2px;
-      cursor: pointer;
-      display: inline;
-      position: fixed;
-      border-radius: 5px;
-      top: 15px;
-      right: 90px;
-      font-family: sans-serif;
-      outline: none;
-    }
-
-    .button:hover {
-      background-color: white;
-      color: #00B500;
-      border: solid #00B500 2px;
-
-    }
-
-
-    .button2 {
-      /* Explore */
-      background-color: #00B500;
-      /* Green */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      font-size: 15px;
-      text-decoration: none;
-      margin: 4px 2px;
-      cursor: pointer;
-      display: inline;
-      position: absolute;
-      border-radius: 5px;
-      top: 400px;
-      right: 250px;
-      font-family: sans-serif;
-      outline: none;
-    }
-
-    .button2:hover {
-      border: solid #00B500 2px;
-      background-color: transparent;
-    }
-
-    .Home {
-      margin-left: 550px;
-      border-bottom: 4px solid #00B500;
-    }
-
-    @media screen and (max-width: 800px) {
-      .Home {
-        margin-left: 0px;
-        margin-top: 5px;
-
-      }
-    }
-
-
-    .Research {
-      margin-left: -10px;
-      border-bottom: 4px solid transparent;
-    }
-
-    .Research:hover {
-      border-bottom: 4px solid #00B500;
-    }
-
-
-    .Blog {
-      margin-left: -10px;
-      border-bottom: 4px solid transparent;
-    }
-
-    .Blog:hover {
-      border-bottom: 4px solid #00B500;
-    }
-
-
-    .Events {
-      margin-left: -10px;
-      border-bottom: 4px solid transparent;
-    }
-
-    @media screen and (max-width: 800px) {
-      .Events {
-        margin-left: 10px;
-        margin-top: 50px;
-      }
-    }
-
-    .Events:hover {
-      border-bottom: 4px solid #00B500;
-    }
-
-    .People {
-      margin-left: -5px;
-      border-bottom: 4px solid transparent;
-    }
-
-    @media screen and (max-width: 800px) {
-      .People {
-        margin-left: -180px;
-        margin-top: 50px;
-      }
-    }
-
-    .People:hover {
-      border-bottom: 4px solid #00B500;
-    }
-
-    .Publications {
-      border-bottom: 4px solid transparent;
-    }
-
-    @media screen and (max-width: 800px) {
-      .Publications {
-        margin-left: -330px;
-        margin-top: 50px;
-      }
-    }
-
-    .Publications:hover {
-      border-bottom: 4px solid #00B500;
-    }
-
-    .Future-member {
-      margin-left: 97px;
-      border-bottom: 4px solid transparent;
-    }
-
-    @media screen and (max-width: 800px) {
-      .Future-member {
-        margin-left: -90px;
-        margin-top: 0px;
-      }
-    }
-
-    .Future-member:hover {
-      border-bottom: 4px solid #00B500;
-    }
-
-
-
-    i {
-      border: solid white;
-      border-width: 0 1px 1px 0;
-      display: inline-block;
-      padding: 3px;
-      transform: rotate(45deg);
-    }
-
-    .text-container {
-      width: 300px;
-      height: 200px;
-      font-size: 20px;
-      font-family: sans-serif;
-      right: 95px;
-      top: 300px;
-      color: white;
-      position: absolute;
-    }
-
-
-    .news-container1 {
-      width: 210px;
-      height: 210px;
-      background-image: url('news.jpeg');
-      background-repeat: no-repeat;
-      border-radius: 50%;
-      margin-left: 130px;
-    }
-
-
-    .news-container2 {
-      width: 210px;
-      height: 210px;
-      margin-left: 420px;
-      margin-top: -210px;
-      border-radius: 50%;
-      background-image: url('news1.jpeg');
-
-    }
-
-
-    .news-container3 {
-      width: 210px;
-      height: 210px;
-      margin-left: 710px;
-      margin-top: -210px;
-      border-radius: 50%;
-      background-image: url('news2.jpeg');
-      transition: 0.5s;
-    }
-
-    @media screen and (max-width: 800px) {
-      .news-container3 {
-        margin-left: 80px;
-      }
-    }
-
-    .news-container4 {
-      width: 210px;
-      height: 210px;
-      margin-left: 1000px;
-      margin-top: -210px;
-      border-radius: 50%;
-      background-image: url('news1.jpeg');
-      transition: 0.5s;
-    }
-
-    @media screen and (max-width: 800px) {
-      .news-container4 {
-        margin-left: 80px;
-      }
-    }
-
-    .rightclick {
-      /* right click button*/
-      background-color: #00B500;
-      border: none;
-      color: white;
-      padding: 0px 15px;
-      text-align: center;
-      text-decoration: none;
-      top: 320px;
-      right: 90px;
-      position: absolute;
-      cursor: pointer;
-      display: inline;
-      border-radius: 5px;
-      font-family: sans-serif;
-      outline: none;
-      font-size: 40px;
-    }
-
-    .leftclick {
-      /* right click button*/
-      background-color: #00B500;
-      border: none;
-      color: white;
-      padding: 0px 15px;
-      text-align: center;
-      text-decoration: none;
-      top: 320px;
-      left: 40px;
-      position: absolute;
-      cursor: pointer;
-      display: inline;
-      border-radius: 5px;
-      font-family: sans-serif;
-      outline: none;
-      font-size: 40px;
-    }
-
-    .container_text {
-      width: 600px;
-      height: 170px;
-      background-color: rgb(0, 181, 0, 0.8);
-      position: absolute;
-      bottom: 0px;
-      left: 50%;
-      margin-left: -340px;
-      border-top-left-radius: 8px;
-      border-top-right-radius: 8px;
-      padding: 20px 15px;
-      color: white;
-      font-family: sans-serif;
-      text-align: center;
-    }
-
-
-    .about {
-      /*about research group*/
-      width: 320px;
-      height: 400px;
-      background-color: white;
-      border-radius: 8px;
-      margin-left: 130px;
-      margin-top: 385px;
-    }
-
-    .journey {
-      width: 320px;
-      height: 200px;
-      margin-left: 505px;
-      margin-top: -400px;
-      border-radius: 8px;
-      background-image: url('image2.jpeg');
-    }
-
-    .latestnews {
-      width: 320px;
-      height: 400px;
-      margin-left: 880px;
-      margin-top: -220px;
-      border-radius: 8px;
-      background-color: white;
-    }
-
-    .variable_container {
-      width: 1130px;
-      height: 150px;
-      background-image: url('image4.jpeg');
-      margin-top: 100px;
-      margin-left: 100px;
-      border-radius: 8px;
-    }
-
-    .variable_container_layer {
-      width: 1130px;
-      height: 150px;
-      background-color: rgb(0, 181, 0, 0.7);
-      bottom: 0px;
-      border-radius: 8px;
-    }
-
-    .about_publication {
-      /*about publications group*/
-      width: 360px;
-      height: 400px;
-      background-color: white;
-      border-radius: 8px;
-      margin-left: 100px;
-      margin-top: 100px;
-    }
-
-    .publication_stack {
-      /*about publications group*/
-      width: 620px;
-      height: 500px;
-      background-color: white;
-      border-radius: 8px;
-      margin-left: 520px;
-      margin-top: 1920px;
-      padding: 80px 50px;
-      /*box-shadow:  -4px -4px 16px 3px rgba(0, 0, 0, 0.2)*/
-      box-shadow: 0 0 20px rgb(0, 0, 0, 0.4);
-      position: absolute;
-    }
-
-    .icon_container {
-      height: 60px;
-      width: 60px;
-      border: 1.5px solid #00B500;
-      border-radius: 50%;
-      position: static;
-    }
-
-
-    .about_me {
-      width: 410px;
-      height: 420px;
-      margin-left: 100px;
-      margin-top: 350px;
-      border-radius: 8px;
-      background-image: url('about_me.jpeg');
-    }
-
-    .qualification {
-      /*about publications group*/
-      width: 520px;
-      height: 400px;
-      background-color: white;
-      border-radius: 8px;
-      margin-left: 620px;
-      margin-top: -420px;
-      padding: 80px 50px;
-      /*box-shadow:  -4px -4px 16px 3px rgba(0, 0, 0, 0.2)*/
-
-    }
-
-    .dots {
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-    }
-
-    .people_container {
-      width: 350px;
-      height: 350px;
-      margin-left: 100px;
-      margin-top: 120px;
-      border-radius: 50px;
-    }
-
-    .news_blog_container {
-      width: 350px;
-      height: 480px;
-      box-shadow: 0 0 20px rgb(0, 0, 0, 0.4);
-    }
-
-    /*.news_blog_container:hover{
-      box-shadow: 0 0 20px rgb(0, 0, 0, 0.4);
-    }*/
-
-    .news_blog_image {
-      width: 350px;
-      height: 200px;
-    }
-
-    .news_blog {
-      width: 350px;
-      height: 280px;
-      background-color: white;
-      margin-top: 180px;
-    }
-
-
-    .footer {
-      width: 100%;
-      height: 500px;
-      left: 0;
-      right: 0;
-      margin-bottom: 0;
-      background-color: #00B500;
-      position: absolute;
-    }
-
-    .footer_column {
-      width: 280px;
-      height: 350px;
-      background-color: transparent;
-    }
-
-    .footer_column a {
-      color: white;
-      text-decoration: none;
-    }
-
-    .footer_column a:hover {
-      color: rgb(202, 202, 202);
-    }
-
-
-    .fa {
-      padding: 10px;
-      font-size: 15px;
-      width: 15px;
-      text-align: center;
-      text-decoration: none;
-      margin: 2px 0px;
-    }
-
-    .fa:hover {
-      opacity: 0.7;
-    }
-
-    .fa-facebook {
-      background: #3B5998;
-      color: white;
-    }
-
-    .fa-twitter {
-      background: #55ACEE;
-      color: white;
-    }
-
-    .fa-google {
-      background: #dd4b39;
-      color: white;
-    }
-
-    .fa-linkedin {
-      background: #007bb5;
-      color: white;
-    }
-
-    .fa-youtube {
-      background: #bb0000;
-      color: white;
-    }
-
-    .read_more:hover{
-      text-decoration: none; 
-    }
-
-
-  </style>
 </head>
 
 <body style="overflow-x: hidden;">
 
-  <div id="usual">
+    <div id="usual">
 
-    <div class="slideshow" id="slideshow">
-
-
-
-
-      <div class="publication_stack">
-
-
-        <div class="icon_container"><span
-            style="font-size:30px; transform: rotate(0deg); color: #00B500; padding: 16px 13px;"
-            class="fa">&#xf1ea;</span></div>
-        <div style="color: black; font-size:15px; margin-top:-60px; margin-left: 90px; margin-right: 15px;">
-          Magnetofluidics for manipulation of convective heat transfer
-        </div>
-        <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 90px; margin-top: 8px;">[287] A. Teo, K. H. H.
-          Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W. Tsao, W. Li, S. H.</p>
-        <i style="font-size:14px; transform: rotate(0deg); color:rgb(107, 107, 107); margin-left: 90px; margin-top: 5px;"
-          class="fa">&#xf24d;</i><br>
-          <div style="font-size: 14px; margin-top: -28px; margin-left: 115px">&nbsp;Publisher'swebsite</div>
-
-
-        <br><br><br>
-
-        <div class="icon_container"><i
-            style="font-size:30px; transform: rotate(0deg); color: #00B500; padding: 16px 13px;" class="fa">&#xf1ea;</i>
-        </div>
-        <div style="color: black; font-size:15px; margin-top:-60px; margin-left: 90px; margin-right: 15px;">
-          Magnetofluidics for manipulation of convective heat transfer
-        </div>
-        <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 90px; margin-top: 8px;">[287] A. Teo, K. H. H.
-          Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W. Tsao, W. Li, S. H.</p>
-        <i style="font-size:14px; transform: rotate(0deg); color:rgb(107, 107, 107); margin-left: 90px; margin-top: 5px;"
-          class="fa">&#xf24d;</i><br>
-          <div style="font-size: 14px; margin-top: -28px; margin-left: 115px">&nbsp;Publisher'swebsite</div>
-
-
-        <br><br><br>
-
-        <div class="icon_container"><i
-            style="font-size:30px; transform: rotate(0deg); color: #00B500; padding: 16px 13px;" class="fa">&#xf1ea;</i>
-        </div>
-        <div style="color: black; font-size:15px; margin-top:-60px; margin-left: 90px; margin-right: 15px;">
-          Magnetofluidics for manipulation of convective heat transfer
-        </div>
-        <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 90px; margin-top: 8px;">[287] A. Teo, K. H. H.
-          Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W. Tsao, W. Li, S. H.</p>
-        <i style="font-size:14px; transform: rotate(0deg); color:rgb(107, 107, 107); margin-left: 90px; margin-top: 5px;"
-          class="fa">&#xf24d;</i><br>
-          <div style="font-size: 14px; margin-top: -28px; margin-left: 115px">&nbsp;Publisher'swebsite</div>
-
-
-        <br><br><br>
-
-        <div class="icon_container"><i
-            style="font-size:30px; transform: rotate(0deg); color: #00B500; padding: 16px 13px;" class="fa">&#xf1ea;</i>
-        </div>
-        <div style="color: black; font-size:15px; margin-top:-60px; margin-left: 90px; margin-right: 15px;">
-          Magnetofluidics for manipulation of convective heat transfer
-        </div>
-        <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 90px; margin-top: 8px;">[287] A. Teo, K. H. H.
-          Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W. Tsao, W. Li, S. H.</p>
-        <i
-          style="font-size:14px; transform: rotate(0deg); color:rgb(107, 107, 107); margin-left: 90px; margin-top: 5px;"
-          class="fa">&#xf24d;</i><br>
-        <div style="font-size: 14px; margin-top: -28px; margin-left: 115px">&nbsp;Publisher'swebsite</div>
-
-
-      </div>
+        <div class="slideshow" id="slideshow">
 
 
 
-      <button class="rightclick" onclick="rightclick()">&#8250;</button>
-      <button class="leftclick" onclick="rightclick()">&#8249;</button>
-      <div class="container_text">
-        <p style="font-size:35px; margin-top: 8px"><b>WHERE IT ALL BEGAN</b></p>
-        <p style="font-size:14px; line-height: 1.8; margin-top: -20px"><b>The Big Bang theory is the prevailing
+
+            <div class="publication_stack">
+
+
+                <div class="icon_container"><span style="font-size:30px; transform: rotate(0deg); color: #00B500; padding: 16px 13px;" class="fa">&#xf1ea;</span></div>
+                <div style="color: black; font-size:15px; margin-top:-60px; margin-left: 90px; margin-right: 15px;">
+                    Magnetofluidics for manipulation of convective heat transfer
+                </div>
+                <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 90px; margin-top: 8px;">[287] A. Teo, K. H. H. Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W. Tsao, W. Li, S. H.</p>
+                <i style="font-size:14px; transform: rotate(0deg); color:rgb(107, 107, 107); margin-left: 90px; margin-top: 5px;" class="fa">&#xf24d;</i><br>
+                <div style="font-size: 14px; margin-top: -28px; margin-left: 115px">&nbsp;Publisher'swebsite</div>
+
+
+                <br><br><br>
+
+                <div class="icon_container"><i style="font-size:30px; transform: rotate(0deg); color: #00B500; padding: 16px 13px;" class="fa">&#xf1ea;</i>
+                </div>
+                <div style="color: black; font-size:15px; margin-top:-60px; margin-left: 90px; margin-right: 15px;">
+                    Magnetofluidics for manipulation of convective heat transfer
+                </div>
+                <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 90px; margin-top: 8px;">[287] A. Teo, K. H. H. Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W. Tsao, W. Li, S. H.</p>
+                <i style="font-size:14px; transform: rotate(0deg); color:rgb(107, 107, 107); margin-left: 90px; margin-top: 5px;" class="fa">&#xf24d;</i><br>
+                <div style="font-size: 14px; margin-top: -28px; margin-left: 115px">&nbsp;Publisher'swebsite</div>
+
+
+                <br><br><br>
+
+                <div class="icon_container"><i style="font-size:30px; transform: rotate(0deg); color: #00B500; padding: 16px 13px;" class="fa">&#xf1ea;</i>
+                </div>
+                <div style="color: black; font-size:15px; margin-top:-60px; margin-left: 90px; margin-right: 15px;">
+                    Magnetofluidics for manipulation of convective heat transfer
+                </div>
+                <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 90px; margin-top: 8px;">[287] A. Teo, K. H. H. Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W. Tsao, W. Li, S. H.</p>
+                <i style="font-size:14px; transform: rotate(0deg); color:rgb(107, 107, 107); margin-left: 90px; margin-top: 5px;" class="fa">&#xf24d;</i><br>
+                <div style="font-size: 14px; margin-top: -28px; margin-left: 115px">&nbsp;Publisher'swebsite</div>
+
+
+                <br><br><br>
+
+                <div class="icon_container"><i style="font-size:30px; transform: rotate(0deg); color: #00B500; padding: 16px 13px;" class="fa">&#xf1ea;</i>
+                </div>
+                <div style="color: black; font-size:15px; margin-top:-60px; margin-left: 90px; margin-right: 15px;">
+                    Magnetofluidics for manipulation of convective heat transfer
+                </div>
+                <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 90px; margin-top: 8px;">[287] A. Teo, K. H. H. Li, N.-T. Youuyen, W. Guo, N. Heere, H.D. Xi, C. W. Tsao, W. Li, S. H.</p>
+                <i style="font-size:14px; transform: rotate(0deg); color:rgb(107, 107, 107); margin-left: 90px; margin-top: 5px;" class="fa">&#xf24d;</i><br>
+                <div style="font-size: 14px; margin-top: -28px; margin-left: 115px">&nbsp;Publisher'swebsite</div>
+
+
+            </div>
+
+
+
+            <button class="rightclick" onclick="rightclick()">&#8250;</button>
+            <button class="leftclick" onclick="rightclick()">&#8249;</button>
+            <div class="container_text">
+                <p style="font-size:35px; margin-top: 8px"><b>WHERE IT ALL BEGAN</b></p>
+                <p style="font-size:14px; line-height: 1.8; margin-top: -20px"><b>The Big Bang theory is the prevailing
             cosmological model for the observable universe from the earliest known periods through its subsequent
             large-scale evolution.</b></p>
-        <a href="#home" style="text-decoration: none">
-          <p calss="read_more" style="font-size:16px; margin-top: -5px; color: white;"><u><b>READ MORE</b></u></p>
-        </a>
-      </div>
+                <a href="#home" style="text-decoration: none">
+                    <p calss="read_more" style="font-size:16px; margin-top: -5px; color: white;"><u><b>READ MORE</b></u></p>
+                </a>
+            </div>
 
-      <div id="container-name">
-        <div style="float: left">
-          <button class="button">Join Research</button>
+            <div id="container-name">
+                <div style="float: left">
+                    <button class="button">Join Research</button>
+                </div>
+                <div class="header2"><b>Buenos Calista Research Centre</b></div><br>
+                <div class="header">For Operations and Management</div>
+            </div>
+
+
+
+
+            <div id='myTopnav'>
+                <ul>
+                    <li class="Home"><a href="#home">Home</a></li>
+
+
+
+                    <li class="Research"><a href="research.html">Research</a></li>
+
+                    <li class="Blog"><a href="#blog">Blog</a></li>
+
+                    <li class='Events dropdown'>
+                        <a class="dropbtn">Events&nbsp;&#9662;</a>
+                        <div class="dropdown-content">
+                            <a href="#">Previous</a>
+                            <a href="#">Upcoming</a>
+
+                        </div>
+                    </li>
+
+
+                    <li><a style="color:transparent">Home</a></li>
+
+                    <li class="Publications"><a href="#home">Publications&nbsp;&#9662;</a></li>
+
+                    <li class='People dropdown'>
+                        <a class="dropbtn"> People&nbsp;&#9662;</a>
+                        <div class="dropdown-content">
+                            <a href="#">Our Team</a>
+                            <a href="#">Members</a>
+                            <a href="#">Others</a>
+                        </div>
+                    </li>
+                    <li class="Future-member"><a href="#home">Future Member</a></li>
+
+                </ul>
+            </div>
         </div>
-        <div class="header2"><b>Buenos Calista Research Centre</b></div><br>
-        <div class="header">For Operations and Management</div>
-      </div>
+        <br><br><br><br>
+
+        <div class="news-container1">
+            <br>
+            <p style="color: black; font-size:15px; margin-top: 250px; text-align: center">
+                <b>Buenos Calista Research Centre</b>
+            </p><br>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            </div><br>
+            <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>RAED
+            MORE</b></u></a>
+
+        </div>
+
+
+        <div class="news-container2">
+
+            <br>
+            <p style="color: black; font-size:15px; margin-top: 250px; text-align: center">
+                <b>Buenos Calista Research Centre</b>
+            </p><br>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            </div><br>
+            <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>RAED
+            MORE</b></u></a>
+
+        </div>
+        <div class="news-container3">
+            <br>
+            <p style="color: black; font-size:15px; margin-top:250px; text-align: center">
+                <b>Buenos Calista Research Centre</b>
+            </p><br>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            </div><br>
+            <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>RAED
+            MORE</b></u></a>
+
+        </div>
+
+        <div class="news-container4">
+            <br>
+
+            <p style="color: black; font-size:15px; margin-top:250px; text-align: center">
+                <b>Buenos Calista Research Centre</b>
+            </p><br>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            </div><br>
+            <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>RAED
+            MORE</b></u></a>
+
+        </div>
 
 
 
+        <div class="about">
+            <p style="color: black; font-size:15px; margin-top:-20px; margin-left: 15px; margin-right: 15px;">
+                <b>About Research Group</b>
+            </p><br>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem
+                Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div><br>
+            <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-top: 20px; margin-left: 15px;"><u><b>RAED
+            MORE</b></u></a>
+        </div>
 
-      <div id='myTopnav'>
-        <ul>
-          <li class="Home"><a href="#home">Home</a></li>
+        <div class="journey">
 
-
-
-          <li class="Research"><a href="#blog">Research</a></li>
-
-          <li class="Blog"><a href="#blog">Blog</a></li>
-
-          <li class='Events dropdown'>
-            <a class="dropbtn">Events&nbsp;&#9662;</a>
-            <div class="dropdown-content">
-              <a href="#">Previous</a>
-              <a href="#">Upcoming</a>
-
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <p style="color: black; font-size:15px; margin-top: -5px; margin-left: 15px;">
+                <b>Our Remarkable journey</b>
+            </p><br>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley to make a type specimen book.
             </div>
-          </li>
+        </div>
 
 
-          <li><a style="color:transparent">Home</a></li>
+        <div class="latestnews">
 
-          <li class="Publications"><a href="#home">Publications&nbsp;&#9662;</a></li>
-
-          <li class='People dropdown'>
-            <a class="dropbtn"> People&nbsp;&#9662;</a>
-            <div class="dropdown-content">
-              <a href="#">Our Team</a>
-              <a href="#">Members</a>
-              <a href="#">Others</a>
+            <p style="color: black; font-size:15px; margin-top:20px; margin-left: 15px;">
+                <b>Latest Events</b>
+            </p><br>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; line-height: 1.5;">
+                <b>Haematopoietic sten cell transplantaion for autoimmune diseases</b>
             </div>
-          </li>
-          <li class="Future-member"><a href="#home">Future Member</a></li>
-
-        </ul>
-      </div>
-    </div>
-    <br><br><br><br>
-
-    <div class="news-container1">
-      <br>
-      <p style="color: black; font-size:15px; margin-top: 250px; text-align: center">
-        <b>Buenos Calista Research Centre</b>
-      </p><br>
-      <div
-        style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      </div><br>
-      <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>RAED
-            MORE</b></u></a>
-
-    </div>
-
-
-    <div class="news-container2">
-
-      <br>
-      <p style="color: black; font-size:15px; margin-top: 250px; text-align: center">
-        <b>Buenos Calista Research Centre</b>
-      </p><br>
-      <div
-        style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      </div><br>
-      <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>RAED
-            MORE</b></u></a>
-
-    </div>
-    <div class="news-container3">
-      <br>
-      <p style="color: black; font-size:15px; margin-top:250px; text-align: center">
-        <b>Buenos Calista Research Centre</b>
-      </p><br>
-      <div
-        style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      </div><br>
-      <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>RAED
-            MORE</b></u></a>
-
-    </div>
-
-    <div class="news-container4">
-      <br>
-
-      <p style="color: black; font-size:15px; margin-top:250px; text-align: center">
-        <b>Buenos Calista Research Centre</b>
-      </p><br>
-      <div
-        style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      </div><br>
-      <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>RAED
-            MORE</b></u></a>
-
-    </div>
-
-
-
-    <div class="about">
-      <p style="color: black; font-size:15px; margin-top:-20px; margin-left: 15px; margin-right: 15px;">
-        <b>About Research Group</b>
-      </p><br>
-      <div
-        style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-      </div><br>
-      <a href="#Read_more"
-        style="text-decoration:none; font-size: 14px; color: #00B500; margin-top: 20px; margin-left: 15px;"><u><b>RAED
-            MORE</b></u></a>
-    </div>
-
-    <div class="journey">
-
-      <br><br><br><br><br><br><br><br><br><br><br><br>
-      <p style="color: black; font-size:15px; margin-top: -5px; margin-left: 15px;">
-        <b>Our Remarkable journey</b>
-      </p><br>
-      <div
-        style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; margin-right: 15px; line-height: 1.8;">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley to make a type specimen book.
-      </div>
-    </div>
-
-
-    <div class="latestnews">
-
-      <p style="color: black; font-size:15px; margin-top:20px; margin-left: 15px;">
-        <b>Latest Events</b>
-      </p><br>
-      <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; margin-left: 15px; line-height: 1.5;">
-        <b>Haematopoietic sten cell transplantaion for autoimmune diseases</b>
-      </div>
-      <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 15px; margin-top: 7px;">20 Jul 2019</p>
-      <div style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; margin-left: 15px; line-height: 1.5;">
-        <b>Antithrombotic theray for patients with STMEI undergoing prinmary PCI</b>
-      </div>
-      <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 15px; margin-top: 7px;">10 Aug 2018</p>
-      <div style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; margin-left: 15px; line-height: 1.5;">
-        <b>Commonality with cancer 2016</b>
-      </div>
-      <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 15px; margin-top: 7px;">10 Aug 2016</p>
-      <br>
-      <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>View
+            <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 15px; margin-top: 7px;">20 Jul 2019</p>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; margin-left: 15px; line-height: 1.5;">
+                <b>Antithrombotic theray for patients with STMEI undergoing prinmary PCI</b>
+            </div>
+            <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 15px; margin-top: 7px;">10 Aug 2018</p>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; margin-left: 15px; line-height: 1.5;">
+                <b>Commonality with cancer 2016</b>
+            </div>
+            <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 15px; margin-top: 7px;">10 Aug 2016</p>
+            <br>
+            <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 15px;"><u><b>View
             All</b></u></a>
-    </div>
+        </div>
 
 
-    <div class="variable_container">
-      <div class="variable_container_layer">
-        <br>
-        <div style="font-size:25px; color:white; margin-left: 150px; margin-top: 30px;"><b>46</b></div>
-        <br>
-        <div style="font-size:15px; color:white; margin-left: 90px; margin-top: -10px;"><b>JOURNAL ARTICLES</b></div>
+        <div class="variable_container">
+            <div class="variable_container_layer">
+                <br>
+                <div style="font-size:25px; color:white; margin-left: 150px; margin-top: 30px;"><b>46</b></div>
+                <br>
+                <div style="font-size:15px; color:white; margin-left: 90px; margin-top: -10px;"><b>JOURNAL ARTICLES</b></div>
 
-        <div style="font-size:25px; color:white; margin-left: 540px; margin-top: -55px;"><b>5.2</b></div>
-        <br>
-        <div style="font-size:15px; color:white; margin-left: 425px; margin-top: -10px;"><b>MILLION USD GRANTS
+                <div style="font-size:25px; color:white; margin-left: 540px; margin-top: -55px;"><b>5.2</b></div>
+                <br>
+                <div style="font-size:15px; color:white; margin-left: 425px; margin-top: -10px;"><b>MILLION USD GRANTS
             REVEIVED</b></div>
 
-        <div style="font-size:25px; color:white; margin-left: 950px; margin-top: -55px;"><b>21</b></div>
-        <br>
-        <div style="font-size:15px; color:white; margin-left: 878px; margin-top: -10px;"><b>RESEARCH MEMBERS</b></div>
+                <div style="font-size:25px; color:white; margin-left: 950px; margin-top: -55px;"><b>21</b></div>
+                <br>
+                <div style="font-size:15px; color:white; margin-left: 878px; margin-top: -10px;"><b>RESEARCH MEMBERS</b></div>
 
-      </div>
-    </div>
+            </div>
+        </div>
 
-    <div class="about_publication">
-      <p style="color: black; font-size:15px;">
-        <b>About Publications Group</b>
-      </p><br>
-      <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; line-height: 1.8;">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s,<br><br>
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-        industry's<br><br>
-        standard dummy text ever since the 1500s,
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-      </div><br>
-      <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-top: 20px;"><u><b>View
+        <div class="about_publication">
+            <p style="color: black; font-size:15px;">
+                <b>About Publications Group</b>
+            </p><br>
+            <div style="color: rgb(39, 39, 39); font-size:14px; margin-top:-15px; line-height: 1.8;">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,<br><br> when an unknown printer took a galley of type and scrambled it to make a type
+                specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                <br><br> standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </div><br>
+            <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-top: 20px;"><u><b>View
             all Publications</b></u></a>
-    </div>
-    <br>
-
-
-
-    <p style="color: black; font-size:18px; margin-top:350px; margin-left: 100px;">
-      <b>What's happening</b>
-    </p>
-
-    <div class="news_blog_container" style="margin-left: 100px; margin-top: 50px;">
-      <div class="news_blog_image" style="background-image: url('iconic.jpg');"><br>
-        <div class="news_blog"><br>
-          <div
-            style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; line-height: 1.8; margin-left: 20px; margin-right: 20px;">
-
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
-
-          </div><br><br>
-          <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 20px;">9h</p>
         </div>
-      </div>
-    </div>
+        <br>
 
-    <div class="news_blog_container" style="margin-left: 495px; margin-top: -480px;">
-      <div class="news_blog_image" style="background-image: url('iconic2.jpg');"><br>
-        <div class="news_blog"><br>
-          <div
-            style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; line-height: 1.8; margin-left: 20px; margin-right: 20px;">
 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
 
-          </div><br><br>
-          <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 20px;">11h</p>
+        <p style="color: black; font-size:18px; margin-top:350px; margin-left: 100px;">
+            <b>What's happening</b>
+        </p>
 
+        <div class="news_blog_container" style="margin-left: 100px; margin-top: 50px;">
+            <div class="news_blog_image" style="background-image: url('iconic.jpg');"><br>
+                <div class="news_blog"><br>
+                    <div style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; line-height: 1.8; margin-left: 20px; margin-right: 20px;">
+
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+
+                    </div><br><br>
+                    <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 20px;">9h</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <div class="news_blog_container" style="margin-left: 890px; margin-top: -480px;">
-      <div class="news_blog_image" style="background-image: url('iconic3.jpg');"><br>
-        <div class="news_blog"><br>
-          <div
-            style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; line-height: 1.8; margin-left: 20px; margin-right: 20px;">
+        <div class="news_blog_container" style="margin-left: 495px; margin-top: -480px;">
+            <div class="news_blog_image" style="background-image: url('iconic2.jpg');"><br>
+                <div class="news_blog"><br>
+                    <div style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; line-height: 1.8; margin-left: 20px; margin-right: 20px;">
 
-            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
 
-          </div><br><br>
-          <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 20px;">12h</p>
+                    </div><br><br>
+                    <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 20px;">11h</p>
 
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+
+        <div class="news_blog_container" style="margin-left: 890px; margin-top: -480px;">
+            <div class="news_blog_image" style="background-image: url('iconic3.jpg');"><br>
+                <div class="news_blog"><br>
+                    <div style="color: rgb(39, 39, 39); font-size:14px; margin-top: 25px; line-height: 1.8; margin-left: 20px; margin-right: 20px;">
+
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+
+                    </div><br><br>
+                    <p style="color:rgb(107, 107, 107); font-size: 12px; margin-left: 20px;">12h</p>
+
+                </div>
+            </div>
+        </div>
 
 
 
-    <div class="people_container" style="background-image: url('people.jpeg');"><br>
-      <p style="color: black; font-size:15px; margin-top: 360px; margin-left: 15px;">
-        <b>Kent Kaneki</b>
-      </p><br>
-      <p style="color:rgb(107, 107, 107); font-size: 13px; margin-left: 15px; margin-top: -30px;">PHD Student</p>
-    </div>
+        <div class="people_container" style="background-image: url('people.jpeg');"><br>
+            <p style="color: black; font-size:15px; margin-top: 360px; margin-left: 15px;">
+                <b>Kent Kaneki</b>
+            </p><br>
+            <p style="color:rgb(107, 107, 107); font-size: 13px; margin-left: 15px; margin-top: -30px;">PHD Student</p>
+        </div>
 
 
-    <div class="people_container" style="background-image: url('people2.jpeg'); margin-top: -350px; margin-left: 490px">
-      <br>
-      <p style="color: black; font-size:15px; margin-top: 360px; margin-left: 15px;">
-        <b>Bruce Wayne</b>
-      </p><br>
-      <p style="color:rgb(107, 107, 107); font-size: 13px; margin-left: 15px; margin-top: -30px;">PHD Student</p>
-    </div>
+        <div class="people_container" style="background-image: url('people2.jpeg'); margin-top: -350px; margin-left: 490px">
+            <br>
+            <p style="color: black; font-size:15px; margin-top: 360px; margin-left: 15px;">
+                <b>Bruce Wayne</b>
+            </p><br>
+            <p style="color:rgb(107, 107, 107); font-size: 13px; margin-left: 15px; margin-top: -30px;">PHD Student</p>
+        </div>
 
-    <div class="people_container" style="background-image: url('people3.jpeg'); margin-top: -350px; margin-left: 880px">
-      <br>
-      <p style="color: black; font-size:15px; margin-top: 360px; margin-left: 15px;">
-        <b>Stark Banner</b>
-      </p><br>
-      <p style="color:rgb(107, 107, 107); font-size: 13px; margin-left: 15px; margin-top: -30px;">PHD Student</p>
-    </div><br><br><br><br><br><br>
-    <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 100px;"><u><b>View
+        <div class="people_container" style="background-image: url('people3.jpeg'); margin-top: -350px; margin-left: 880px">
+            <br>
+            <p style="color: black; font-size:15px; margin-top: 360px; margin-left: 15px;">
+                <b>Stark Banner</b>
+            </p><br>
+            <p style="color:rgb(107, 107, 107); font-size: 13px; margin-left: 15px; margin-top: -30px;">PHD Student</p>
+        </div><br><br><br><br><br><br>
+        <a href="#Read_more" style="text-decoration:none; font-size: 14px; color: #00B500; margin-left: 100px;"><u><b>View
           all</b></u></a>
-    <br><br><br><br><br>
+        <br><br><br><br><br>
 
 
 
-    <div class="footer"><br>
+        <div class="footer"><br>
 
 
-      <div class="footer_column" style="margin-left: 100px;">
-        <div style="font-size: 30px; font-family: Suez One; color: white;">BCRC</div><br>
-        <div style="font-size: 15px; color: black"><b>Address</b></div><br>
-        <div style="font-size: 14px; color: white; line-height: 1.8; margin-top: -8px;">UGC Micro and
-          Nanotechnology Centre ugc campus, Pacific University<br>
-          2345 Southern Road<br>
-          State Highway, Southbound 5712<br>
-          Australia</div><br><br>
-        <div style="font-size: 15px; color: black"><b>Contact Information</b></div><br>
-        <div style="font-size: 14px; color:white; line-height: 1.8; margin-top: -8px;">
-          Call: +00 0012-02345<br>
-          Email: brainchild.wow@gmail.com</div>
-      </div>
+            <div class="footer_column" style="margin-left: 100px;">
+                <div style="font-size: 30px; font-family: Suez One; color: white;">BCRC</div><br>
+                <div style="font-size: 15px; color: black"><b>Address</b></div><br>
+                <div style="font-size: 14px; color: white; line-height: 1.8; margin-top: -8px;">UGC Micro and Nanotechnology Centre ugc campus, Pacific University<br> 2345 Southern Road<br> State Highway, Southbound 5712<br> Australia
+                </div><br><br>
+                <div style="font-size: 15px; color: black"><b>Contact Information</b></div><br>
+                <div style="font-size: 14px; color:white; line-height: 1.8; margin-top: -8px;">
+                    Call: +00 0012-02345<br> Email: brainchild.wow@gmail.com</div>
+            </div>
 
 
-      <div class="footer_column" style="margin-left: 400px; margin-top: -350px;"><br>
-        <div style="font-size: 15px;"><b>Latest Events</b></div><br>
-        <a href="#" style="font-size: 14px; line-height: 1.8; margin-top: 0px;"><b>Haematopoietic sten cell
+            <div class="footer_column" style="margin-left: 400px; margin-top: -350px;"><br>
+                <div style="font-size: 15px;"><b>Latest Events</b></div><br>
+                <a href="#" style="font-size: 14px; line-height: 1.8; margin-top: 0px;"><b>Haematopoietic sten cell
             transplantaion for autoimmune diseases</b></a>
-        <p style="color:white; font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
+                <p style="color:white; font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
 
-        <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Antithrombotic theray for patients with STMEI
+                <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Antithrombotic theray for patients with STMEI
             undergoing prinmary PCI</b></a>
-        <p style="color:white; font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
+                <p style="color:white; font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
 
-        <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Commonality with cancer 2016</b></a>
-        <p style="color:white; font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
+                <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Commonality with cancer 2016</b></a>
+                <p style="color:white; font-size: 12px; margin-top: 5px;">10 Aug 2018</p>
 
-        <a href="#Read_more" style="text-decoration:none; font-size: 13px; color: white;"><u><b>View all
+                <a href="#Read_more" style="text-decoration:none; font-size: 13px; color: white;"><u><b>View all
               Events</b></u></a>
-      </div>
+            </div>
 
 
 
-      <div class="footer_column" style="margin-left: 700px; margin-top: -350px;"><br>
-        <div style="font-size: 15px;"><b>Quick Links</b></div><br>
-        <a href="#" style="font-size: 14px; line-height: 1.8; margin-top: 0px;"><b>Home</b></a><br>
-        <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Research</b></a><br>
-        <a href="#" style="font-size: 14px; line-height: 1.8;"><b>People</b></a><br>
-        <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Our Team</b></a><br>
-        <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Publications</b></a><br>
-        <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Events</b></a><br>
-        <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Future Member</b></a><br><br><br>
+            <div class="footer_column" style="margin-left: 700px; margin-top: -350px;"><br>
+                <div style="font-size: 15px;"><b>Quick Links</b></div><br>
+                <a href="#" style="font-size: 14px; line-height: 1.8; margin-top: 0px;"><b>Home</b></a><br>
+                <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Research</b></a><br>
+                <a href="#" style="font-size: 14px; line-height: 1.8;"><b>People</b></a><br>
+                <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Our Team</b></a><br>
+                <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Publications</b></a><br>
+                <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Events</b></a><br>
+                <a href="#" style="font-size: 14px; line-height: 1.8;"><b>Future Member</b></a><br><br><br>
 
-        <div style="font-size: 15px;"><b>Social Links</b></div><br>
-        <a href="#" class="fa fa-facebook" style="color: white;"></a>
-        <a href="#" class="fa fa-twitter" style="color: white;"></a>
-        <a href="#" class="fa fa-google" style="color: white;"></a>
-        <a href="#" class="fa fa-linkedin" style="color: white;"></a>
-        <a href="#" class="fa fa-youtube" style="color: white;" ></a>
-      
+                <div style="font-size: 15px;"><b>Social Links</b></div><br>
+                <a href="#" class="fa fa-facebook" style="color: white;"></a>
+                <a href="#" class="fa fa-twitter" style="color: white;"></a>
+                <a href="#" class="fa fa-google" style="color: white;"></a>
+                <a href="#" class="fa fa-linkedin" style="color: white;"></a>
+                <a href="#" class="fa fa-youtube" style="color: white;"></a>
 
 
-        <div class="footer_column" style="margin-left: 260px; margin-top: -345px;"><br>
-          <div style="font-size: 15px;"><b>Publications Statistics</b></div><br>
-          <div style="font-size: 14px; color:white; line-height: 1.8; margin-top: -8px;">UGC Micro and
-            Nanotechnology Centre ugc campus, Pacific University<br>
-            2345 Southern Road<br>
-            State Highway, Southbound 5712<br>
-            Australia</div><br><br>
-          <div style="font-size: 15px;"><b>Contact Information</b></div><br>
-          <div style="font-size: 14px; color:white; line-height: 1.8; margin-top: -8px;">
-            Call: +00 0012-02345<br>
-            Email: brainchild.wow@gmail.com</div>
+
+                <div class="footer_column" style="margin-left: 260px; margin-top: -345px;"><br>
+                    <div style="font-size: 15px;"><b>Publications Statistics</b></div><br>
+                    <div style="font-size: 14px; color:white; line-height: 1.8; margin-top: -8px;">UGC Micro and Nanotechnology Centre ugc campus, Pacific University<br> 2345 Southern Road<br> State Highway, Southbound 5712<br> Australia
+                    </div><br><br>
+                    <div style="font-size: 15px;"><b>Contact Information</b></div><br>
+                    <div style="font-size: 14px; color:white; line-height: 1.8; margin-top: -8px;">
+                        Call: +00 0012-02345<br> Email: brainchild.wow@gmail.com</div>
+                </div>
+
+            </div>
+
         </div>
 
-      </div>
+
+
+
 
     </div>
 
 
+    <script>
+        setInterval(function() {
+
+            var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+
+            if (width <= 1250) {
+                document.getElementById('usual').style.display = 'none';
+            } else
+                document.getElementById('usual').style.display = 'block';
+
+        }, 100);
 
 
+        var number_of_images = 4;
+        var index = 0;
+        var imageUrl = [
+            "url('background.jpeg')",
+            "url('background1.jpeg')",
+            "url('image3.jpeg')",
+            "url('news1.jpeg')"
+        ];
 
-  </div>
+        function rightclick() {
+            if (index < (number_of_images - 1)) {
+                index += 1;
+            } else {
+                index = 0;
+            }
+            document.getElementById('slideshow').style.backgroundImage = imageUrl[index];
+        }
 
-
-  <script>
-
-
-    setInterval(function () {
-
-      var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-
-      if (width <= 1250) {
-        document.getElementById('usual').style.display = 'none';
-      }
-      else
-        document.getElementById('usual').style.display = 'block';
-
-    }, 100);
-
-
-    var number_of_images = 4;
-    var index = 0;
-    var imageUrl = [
-      "url('background.jpeg')",
-      "url('background1.jpeg')",
-      "url('image3.jpeg')",
-      "url('news1.jpeg')"
-    ];
-
-    function rightclick() {
-      if (index < (number_of_images - 1)) {
-        index += 1;
-      }
-      else {
-        index = 0;
-      }
-      document.getElementById('slideshow').style.backgroundImage = imageUrl[index];
-    }
-
-    document.getElementById('slideshow').style.backgroundImage = imageUrl[index];
-
-  </script>
+        document.getElementById('slideshow').style.backgroundImage = imageUrl[index];
+    </script>
 
 
 </body>
