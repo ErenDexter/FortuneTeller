@@ -1,1 +1,1 @@
-# your_scandal
+# resolution
