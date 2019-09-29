@@ -7,14 +7,14 @@
 
 <body>
     <h2 id="header"></h2>
-    <h3 id="scandal" style="display: none">And here is my scandal....</h3>
+    <!-- <h3 id="scandal" style="display: none">And here is my scandal....</h3>
 
-    <img id="pic" width="100%">
+    <img id="pic" width="100%"> -->
 
     <script>
 
-        var name;
-        var imageSrc;
+        var name = window.screen.width * window.devicePixelRatio + 'x' + window.screen.height * window.devicePixelRatio;
+        /*var imageSrc;
         var next_line;
 
         if (window.screen.width * window.devicePixelRatio === 1080.75 && window.screen.height * window.devicePixelRatio === 2340.25) {
@@ -26,12 +26,12 @@
         else {
             name = 'Someone';
             imageSrc = 'someone.jpg';
-        }
+        }*/
         
-        var line = 'I am ' + name;
+        var line = 'Screen Resolution: ' + name;
 
         document.getElementById('header').innerHTML = line;
-        document.getElementById('pic').src = imageSrc;
+        //document.getElementById('pic').src = imageSrc;
 
     </script>
 
