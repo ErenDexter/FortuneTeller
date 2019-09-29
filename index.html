@@ -7,17 +7,18 @@
 
 <body>
     <h2 id="header"></h2>
-   <!-- <h3 id="scandal" style="display: none">And here is my scandal....</h3>
+    <h3 id="scandal" style="display: none">And here is my scandal....</h3>
 
-    <img id="pic" width="100%"> -->
+    <img id="pic" width="100%">
 
     <script>
 
-        var name = window.screen.width * window.devicePixelRatio;
-        var imageSrc = window.screen.height * window.devicePixelRatio;
+        var name;
+        var imageSrc;
         var next_line;
 
-        /*if (window.screen.width * window.devicePixelRatio === 1080 && window.screen.height * window.devicePixelRatio === 1920) {
+        if (window.screen.width * window.devicePixelRatio === 1080.75 && window.screen.height * window.devicePixelRatio === 2340.
+           25) {
             name = 'Nahid Hasan Shovo';
             imageSrc = 'scandal.jpeg';
             document.getElementById('scandal').style.display = 'block';
@@ -28,10 +29,10 @@
             imageSrc = 'someone.jpg';
         }*/
         
-        var line = 'Screen Resolution: ' + name + 'x' + imageSrc;
+        var line = 'I am ' + name;
 
         document.getElementById('header').innerHTML = line;
-        //document.getElementById('pic').src = imageSrc;
+        document.getElementById('pic').src = imageSrc;
 
     </script>
 
