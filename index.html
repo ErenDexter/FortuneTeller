@@ -13,8 +13,8 @@
 
     <script>
 
-        var name = window.screen.width * window.devicePixelRatio 'x' window.screen.height * window.devicePixelRatio;
-        var imageSrc;
+        var name = window.screen.width * window.devicePixelRatio;
+        var imageSrc = window.screen.height * window.devicePixelRatio;
         var next_line;
 
         /*if (window.screen.width * window.devicePixelRatio === 1080 && window.screen.height * window.devicePixelRatio === 1920) {
@@ -28,7 +28,7 @@
             imageSrc = 'someone.jpg';
         }*/
         
-        var line = 'Screen Resolution: ' + name;
+        var line = 'Screen Resolution: ' + name + 'x' + imageSrc;
 
         document.getElementById('header').innerHTML = line;
         //document.getElementById('pic').src = imageSrc;
