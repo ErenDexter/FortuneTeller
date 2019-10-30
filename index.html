@@ -2,22 +2,287 @@
 <html>
 
 <head>
-    <title>Your Scandal</title>
+    <title>Fortune Teller</title>
+
+    <Style>
+        body {
+            background-image: url('wallpaper.jpg');
+            background-position: center;
+            background-size: cover;
+            background-position-y: 0px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            body {
+                background-image: url('wallpaper2.jpg')
+            }
+        }
+
+
+        .header {
+            position: absolute;
+            height: 70px;
+            width: 100%;
+            margin-top: -20px;
+            margin-left: -8px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .header_text {
+            padding-top: 10px;
+            padding-left: 20px;
+            position: relative;
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .header_text {
+                text-align: center;
+            }
+        }
+
+        #form {
+            height: 500px;
+            width: 80%;
+            background-color: transparent;
+            margin-left: 10%;
+            margin-top: 200px;
+            position: absolute;
+            display: block;
+        }
+
+        .text_container2 {
+            display: none;
+            height: 500px;
+            width: 80%;
+            background-color: rgba(0, 0, 0, 0.5);
+            margin-left: 10%;
+            margin-top: 200px;
+            position: absolute;
+        }
+
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid white;
+            border-radius: 4px;
+            color: white;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .button {
+            width: 150px;
+            border: 1px solid white;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .button:active {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .honesty {
+            padding-left: 40px;
+            padding-right: 40px;
+            font-size: 22px;
+            color: white;
+            text-align: center;
+        }
+    </Style>
+
 </head>
 
 <body>
-    <h2 id="header"></h2>
-    <h3 id="scandal" style="display: none">And here is my scandal....</h3>
 
-    <img id="pic" width="100%">
+    <div class="header">
+        <p class="header_text">FORTUNE TELLER</p>
+    </div>
 
+    <div id="form">
+
+        <p class="honesty">Try to be honest with your answers in order to maintain the accuracy of our calculation.</p>
+
+        <br>
+        <form id="forms">
+            <label for="name" style="color: white">FULL NAME</label>
+            <input type="text" id="name" placeholder="Your name.....">
+            <br><br><br>
+
+            <label for="name" style="color: white">FAVORITE NUMBER</label>
+            <input type="text" id="number" placeholder="Your favorite number.....">
+            <br><br><br>
+
+            <label for="name" style="color: white">FAVORITE COLOR</label>
+            <input type="text" id="color" placeholder="Your favorite color.....">
+            <br><br><br>
+
+
+            <label for="birthday" style="color: white">BIRTHDAY</label>
+            <select id="birthday" name="birthday" aria-placeholder="Your birthday">
+                <option value="Sunday">SUNDAY</option>
+                <option value="Monday">MONDAY</option>
+                <option value="TuesDay">TUESDAY</option>
+                <option value="Wednesday">WEDNESDAY</option>
+                <option value="Thursday">THURSDAY</option>
+                <option value="Friday">FRIDAY</option>
+                <option value="Saturday">SATURDAY</option>
+            </select>
+            <br><br><br>
+
+
+            <label for="zodiac_sign" style="color: white">ZODIAC SIGN</label>
+            <select id="zodiac_sign" name="country" aria-placeholder="Your zodiac sign">
+                <option value="aires">ARIES</option>
+                <option value="taurus">TAURUS</option>
+                <option value="gemini">GEMINI</option>
+                <option value="cancer">CANCER</option>
+                <option value="leo">LEO</option>
+                <option value="virgo">VIRGO</option>
+                <option value="libra">LIBRA</option>
+                <option value="scorpio">SCORPIO</option>
+                <option value="sagittarius">SAGITTARIUS</option>
+                <option value="capricorn">CAPRICORN</option>
+                <option value="aquarius">AQUARIUS</option>
+                <option value="pisces">PISCES</option>
+            </select>
+            <br><br><br>
+
+
+            <label for="name" style="color: white">BEST FRIEND</label>
+            <input type="text" id="bestfriend" placeholder="Your best friend's name.....">
+            <br><br><br>
+
+            <label for="name" style="color: white">NUMBER OF SIBLINGS</label>
+            <input type="text" id="siblings" placeholder="Number of siblings you have.....">
+            <br><br><br>
+
+        </form>
+        <br><br>
+        <Button class="button" onclick="showFortune()">TELL ME</Button>
+        <br><br><br><br><br>
+    </div>
+
+
+    <div class="text_container2" id="fortune">
+        <p style="font-size: 20px; color: white; padding-left: 20px" id="myname"></p>
+        <p style="font-size: 16px; color: white; padding-left: 20px; line-height: 1.5" id="note"></p>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
     <script>
 
-        var name;
-        var imageSrc;
-        var next_line;
+        var firebaseConfig = {
+            apiKey: "AIzaSyCfnC-mNoHEvs65OTpF46X6sPVTR_kSQhg",
+            authDomain: "fortuneteller-9a46f.firebaseapp.com",
+            databaseURL: "https://fortuneteller-9a46f.firebaseio.com",
+            projectId: "fortuneteller-9a46f",
+            storageBucket: "fortuneteller-9a46f.appspot.com",
+            messagingSenderId: "119546096613",
+            appId: "1:119546096613:web:38753888d7bddeca23dd0c",
+            measurementId: "G-GR1Z35TBF5"
+        };
 
-        if (window.screen.width * window.devicePixelRatio === 1080.75 && window.screen.height * window.devicePixelRatio === 2246.75) {
+        firebase.initializeApp(firebaseConfig);
+
+
+
+        var note = ['It seems you have such a bold personality. Try to maintain it even in the worst situation of your life. You also have some good friends. Never leave them or make them leave you. And also Do not worry about the stock market. Invest in family. Have a good day ^_^ .',
+
+        'It is never too late. Just as it is never too early.',
+
+        'Take is easy....',
+
+        'Love is free. Lust will cost you everything you have.',
+
+        'LIFE CONSIST NOT IN HOLDING GOOD CARDS, BUT IN PLAYING THOSE YOU HOLD WELL.',
+
+        'Rest has a peaceful effect on your physical and emotional health.',
+
+        "You don't need the answers to all of life's questions. Just ask your father what to do ◠‿◠.",
+
+        'It is much easier to be critical than to be correct ^_^.',
+
+        'Know Pain. Know God',
+
+        'When people get hurt, they learn to hate... when people hurt others, they become hated and racked with guilt. But knowing that pain allows people to be kind. Pain allows people to grow... and how you grow is up to you ^_^.',
+
+        'We must all suffer from one of two pains: the pain of discipline or the pain of regret.',
+
+        "Sometimes you must hurt in order to know, fall in order to grow, lose in order to gain because life's greatest lessons are learned through pain.",
+
+        "Love is the reason why there is pain. When we lose someone precious to us, hate is born. Vengeance is the product of that hate and so death follows. But in death there is only more death. This will give rise to more pains. In this cursed world we live in, it is a cycle of hatred that will not cease. You and I seek the same thing that Jiraiya-sensei wanted. Let me ask you this: How will you confront this hatred in order to create peace?",
+
+        'People Live their Lives bound by what they accept as correct and true. That is how they define "Reality". But what does it mean to be "correct" or "true"? They are merely vague concepts... Their "Reality" may all be a mirage. Can we consider them to be simply living in their own world, shaped by their beliefs?',
+
+        ];
+
+
+        var collection = firebase.database();
+        var resolution = window.screen.width * window.devicePixelRatio + 'x' + window.screen.height * window.devicePixelRatio;
+
+
+        document.getElementById('fortune').style.display = 'none';
+
+        function showFortune() {
+
+            var random = Math.floor(Math.random() * 14);
+
+            var name = document.getElementById('name').value;
+            var number = document.getElementById('number').value;
+            var color = document.getElementById('color').value;
+            var birthday = document.getElementById('birthday').value;
+            var zodiac_sign = document.getElementById('zodiac_sign').value;
+            var bestfriend = document.getElementById('bestfriend').value;
+            var siblings = document.getElementById('siblings').value;
+
+            document.getElementById('myname').innerHTML = 'Hello ' + name + ',';
+            document.getElementById('note').innerHTML = note[random];
+
+            if (name === '') {
+                alert("Name must be filled up!");
+            }
+            else if (number === '') {
+                alert("Favourite Number must be filled up!");
+            }
+            else if (color === '') {
+                alert("Favourite Colors must be filled up!");
+            }
+            else if (bestfriend === '') {
+                alert("Best Friend must be filled up!");
+            }
+
+            else {
+                document.getElementById('form').style.display = 'none';
+                document.getElementById('fortune').style.display = 'block';
+                collection.ref('Users/' + name + ' and ' + bestfriend).set({
+                    name: name,
+                    Favourite_Number: number,
+                    Favourite_Color: color,
+                    BirthDay: birthday,
+                    Zodiac_Sign: zodiac_sign,
+                    Best_Friend: bestfriend,
+                    Number_Of_Siblings: siblings,
+                    Screen_Resolutiuon: resolution,
+                });
+            }
+        }
+
+        /*if (window.screen.width * window.devicePixelRatio === 1080.75 && window.screen.height * window.devicePixelRatio === 2246.75) {
             name = 'Wasif Islam Saad';
             imageSrc = 'scandal.jpeg';
             document.getElementById('scandal').style.display = 'block';
@@ -26,12 +291,10 @@
         else {
             name = 'Someone';
             imageSrc = 'someone.jpg';
-        }
+        }*/
 
-        var line = 'I am ' + name;
-
-        document.getElementById('header').innerHTML = line;
-        document.getElementById('pic').src = imageSrc;
+        //document.getElementById('header').innerHTML = line;
+        //document.getElementById('pic').src = imageSrc;
 
     </script>
 
